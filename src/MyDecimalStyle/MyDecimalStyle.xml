@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="MyDecimalStyle.widget.MyDecimalStyle" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>MyDecimalStyle</name>
+    <description>The description of this widget.</description>
+
+    <icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAInSURBVDhPnZPfS5NhFMdPdhPMObVy1W4qu3AVQl5HYDdrFyH9A1GRFaWJRGHmj4wyiuhCdEZU5tZcOnHvpmlK5MaYFGkMy6u1WKJFKXgj3X4757wLdtGF64HD+TznPOf7vs95z0vgdaJvBvs6J7D//uSGTM7W9CWkFHT8aQKWphB23BzNywqvh+B+HAc5WdHePopdHWN52U4WEU+VD6ZU0XFrTE2Cjqzl8t+cxphFYPftcVDVwzegxiDogh90KQBqGATVvwTVsTUOmSyxcy9g5yJbswGq9fIVDOwRgdKWMJ68/6oNiWdW1Q/PL+Nt+peydzaDj0tryoUseKRrWvlyKIkSrqWiGwb8c4sadDaNILLwQ9nRMIRoekV589Vh9b2JL0itrCvTqefYy1+DbCzgm/2mwS0XB/DsQ0aZzvRjIGkKC/fMpJVlVdyZQElr2LxCroC1PgDfnMmban0IflpSLjjvR8ureWVZlitB2LmZ2kQR8OYIeP8hQCwgqyueUp9aXQed7kc5vwlZuavG52VN2OoCMBa+Kxec9WEq9VN5ce23eqrxYDBpip70vkNpawRUwYN04O5ruLujHAij8t4k3D1RFHOHD3HuMH9mF+8P8tOKOW+5NgJX9zRcj2Io4wHUQdrWFlE1GY6y9ix3mLw1m9vOLEMkZ2QvNdpEJz/xf0dZJpSO8Q9hbQ5pIB8r4t4d7Y1Bf+dqT0znu7xzfEMmZ6s9Ua4E/gAt0qbXecrRPQAAAABJRU5ErkJggg==</icon>
+    <properties>
+    <!--
+        <property key="dummyKey" type="string" required="false" defaultValue="">
+            <caption>Dummy key</caption>
+            <category>Appearance</category>
+            <description>This key was added to make the widget work in the Modeler (needs atleast 1 key). Please change/remove this one</description>
+        </property
+    -->
+
+       <property key="field" type="attribute" required="true" isPath="optional" pathType="reference">
+            <caption>Field</caption>
+            <category>General</category>
+            <description>Field to render</description>
+            <attributeTypes>
+                    <attributeType name="Decimal"/> 
+            </attributeTypes>
+        </property> 
+
+       <property key="beforeClassname" type="string" required="false" defaultValue="">
+            <caption>Before ClassName</caption>
+            <category>General</category>
+            <description></description>
+        </property> 
+        
+       <property key="afterClassname" type="string" required="true" defaultValue="">
+            <caption>After ClassName</caption>
+            <category>General</category>
+            <description></description>
+        </property> 
+
+        <property key="returnEntity" type="entity" isPath='optional' allowNonPersistableEntities="true" pathType="reference">
+            <caption>Return Entity</caption>
+            <category>Behavior</category>
+            <description></description>
+        </property>
+
+        <property key="onClickMicroflow" type="microflow" required="false">
+            <caption>On Click</caption>
+            <category>Behavior</category>
+            <description>This microflow will return an entity</description>
+            <returnType type='Object' entityProperty="returnEntity"></returnType>
+        </property>                     
+    </properties>
+    
+</widget>
